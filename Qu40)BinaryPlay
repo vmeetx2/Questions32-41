@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() 
+{
+    long n;
+    scanf("%ld",&n);
+
+    long rev=0, temp=n, place=1;
+    while(temp)
+{
+        rev += (1 - temp%10)*place;
+        temp/=10;
+        place*=10;
+    }
+
+    printf("%ld\n",rev);
+    return 0;
+}
+
