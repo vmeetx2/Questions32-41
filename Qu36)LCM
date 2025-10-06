@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() 
+{
+    int a,b,gcd,temp;
+    scanf("%d %d",&a,&b);
+    int x=a,y=b;
+
+    while(b)
+{
+        temp=b;
+        b=a%b;
+        a=temp;
+    }
+    gcd=a;
+    printf("%d\n", x*y/gcd);
+    return 0;
+}
