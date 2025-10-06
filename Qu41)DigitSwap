@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <math.h>
+int main() 
+{
+    int n,temp,first,last,digits=0,place;
+    scanf("%d",&n);
+    temp=n;
+
+    last = temp%10;
+    while(temp)
+
+{
+    digits++; temp/=10; }
+    first = n/(int)pow(10,digits-1);
+    place = (int)pow(10,digits-1);
+    n = n - first*place - last + last*place + first;
+    printf("%d\n", n);
+    return 0;
+}
